@@ -54,13 +54,7 @@ const sendUserPass = (email, user, pass) => {
   });
 };
 
-//Static
 
-app.use(express.static(path.join(__dirname, '../client/dist')))
-
-app.get("*" , (req,res)=>{
-  res.sendFile(path.join(__dirname + "../client/dist/index.html"))
-})
 
 const GenerateUsername = (name, lname) => {
   const randomNumber = Math.floor(Math.random() * 100) + 1;
